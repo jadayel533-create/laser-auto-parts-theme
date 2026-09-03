@@ -1,0 +1,8 @@
+{
+  "name": {"ar": "تصنيفات المنتجات", "en": "Category Grid"},
+  "icon": "fa fa-th-large",
+  "settings": [
+    {"id": "title", "type": "text", "label": {"ar": "العنوان", "en": "Title"}, "default": "تسوق حسب التصنيف"},
+    {"id": "subtitle", "type": "textarea", "label": {"ar": "الوصف", "en": "Subtitle"}, "default": "اعثر على القطع المناسبة بشكل أسرع."}
+  ]
+}
