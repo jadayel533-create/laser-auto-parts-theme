@@ -1,0 +1,21 @@
+{% set category_list = categories.results if categories is defined and categories.results else [] %}
+{% if category_list %}
+<section class="section" aria-labelledby="category-grid-title">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <h2 id="category-grid-title">{{ section.settings.title | default(_('Shop by category')) }}</h2>
+        <p>{{ section.settings.subtitle | default(_('Find the right parts faster.')) }}</p>
+      </div>
+      <a class="btn" href="{{ url_for('list_categories') }}">{{ _('View all categories') }}</a>
+    </div>
+    <div class="category-grid">
+      {% for category in category_list[:8] %}
+        <a class="category-card" href="{{ url_for('category_details', category_id=category.id, slug=category.slug) }}">
+          <span>{{ category.name }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
