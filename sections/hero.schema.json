@@ -1,0 +1,11 @@
+{
+  "name": {"ar": "واجهة رئيسية", "en": "Hero"},
+  "icon": "fa fa-car",
+  "settings": [
+    {"id": "eyebrow", "type": "text", "label": {"ar": "النص العلوي", "en": "Eyebrow"}, "default": "قطع غيار سيارات"},
+    {"id": "title", "type": "text", "label": {"ar": "العنوان", "en": "Title"}, "default": "قطع تحافظ على استمرار رحلتك"},
+    {"id": "subtitle", "type": "textarea", "label": {"ar": "الوصف", "en": "Subtitle"}, "default": "تسوّق قطع غيار موثوقة لسيارتك."},
+    {"id": "button_text", "type": "text", "label": {"ar": "نص الزر", "en": "Button text"}, "default": "تسوق الآن"},
+    {"id": "button_url", "type": "text", "label": {"ar": "رابط الزر", "en": "Button URL"}, "default": "/products"}
+  ]
+}

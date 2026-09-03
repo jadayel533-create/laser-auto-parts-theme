@@ -1,0 +1,35 @@
+{% set font_family = settings.font_family | default('IBM+Plex+Sans+Arabic') %}
+<!doctype html>
+<html lang="{{ session.lang }}" dir="{{ session.locale.language.direction }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ store.name }}{% endblock %}</title>
+    {% vitrin_head %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{ font_family }}:wght@400;500;600;700&display=swap">
+    <style>
+      :root {
+        --font-family: '{{ font_family | replace('+', ' ') }}', sans-serif;
+        --background: {{ settings.background | default('#ffffff') }};
+        --foreground: {{ settings.foreground | default('#111827') }};
+        --primary: {{ settings.primary | default('#111827') }};
+        --primary-foreground: {{ settings.primary_foreground | default('#ffffff') }};
+        --accent: {{ settings.accent | default('#e11d48') }};
+        --border: {{ settings.border | default('#e5e7eb') }};
+        --radius: {{ settings.radius | default(8) }}px;
+      }
+    </style>
+    <link rel="stylesheet" href="{{ 'assets/styles.css' | asset_url }}">
+  </head>
+  <body>
+    {% include 'header.jinja' %}
+    <main id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+    {% include 'footer.jinja' %}
+    {% vitrin_body %}
+    <script src="{{ 'assets/theme.js' | asset_url }}"></script>
+  </body>
+</html>

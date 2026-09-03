@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ url_for('home') }}" aria-label="{{ store.name }}">
+      {% if store.logo %}<img src="{{ store.logo }}" alt="{{ store.name }}">{% else %}<span>{{ store.name }}</span>{% endif %}
+    </a>
+    <nav class="main-nav" aria-label="{{ _('Main navigation') }}">
+      <a href="{{ url_for('home') }}">{{ _('Home') }}</a>
+      <a href="{{ url_for('list_products') }}">{{ _('Products') }}</a>
+      <a href="{{ url_for('list_categories') }}">{{ _('Categories') }}</a>
+      <a href="{{ url_for('cart_page') }}">{{ _('Cart') }}</a>
+    </nav>
+  </div>
+</header>

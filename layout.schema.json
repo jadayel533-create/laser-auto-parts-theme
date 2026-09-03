@@ -1,0 +1,38 @@
+{
+  "name": {"ar": "إعدادات الثيم", "en": "Theme Settings"},
+  "groups": [
+    {
+      "id": "typography",
+      "icon": "fa fa-font",
+      "name": {"ar": "الخطوط", "en": "Typography"},
+      "settings": [
+        {
+          "id": "font_family",
+          "type": "select",
+          "label": {"ar": "الخط", "en": "Font"},
+          "default": "IBM+Plex+Sans+Arabic",
+          "options": [
+            {"value": "IBM+Plex+Sans+Arabic", "label": {"ar": "IBM Plex Sans Arabic", "en": "IBM Plex Sans Arabic"}},
+            {"value": "Cairo", "label": {"ar": "Cairo", "en": "Cairo"}},
+            {"value": "Tajawal", "label": {"ar": "Tajawal", "en": "Tajawal"}},
+            {"value": "Roboto", "label": {"ar": "Roboto", "en": "Roboto"}}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "icon": "fa fa-paint-brush",
+      "name": {"ar": "الألوان", "en": "Colors"},
+      "settings": [
+        {"id": "background", "type": "color", "label": {"ar": "الخلفية", "en": "Background"}, "default": "#ffffff"},
+        {"id": "foreground", "type": "color", "label": {"ar": "النص", "en": "Text"}, "default": "#111827"},
+        {"id": "primary", "type": "color", "label": {"ar": "اللون الأساسي", "en": "Primary"}, "default": "#111827"},
+        {"id": "primary_foreground", "type": "color", "label": {"ar": "نص اللون الأساسي", "en": "Primary Text"}, "default": "#ffffff"},
+        {"id": "accent", "type": "color", "label": {"ar": "لون التمييز", "en": "Accent"}, "default": "#e11d48"},
+        {"id": "border", "type": "color", "label": {"ar": "الحدود", "en": "Borders"}, "default": "#e5e7eb"},
+        {"id": "radius", "type": "range", "label": {"ar": "استدارة الحواف", "en": "Border Radius"}, "min": 0, "max": 20, "step": 1, "unit": "px", "default": 8}
+      ]
+    }
+  ]
+}

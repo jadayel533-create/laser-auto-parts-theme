@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.zip
+.vitrin/
+assets/styles.css
+assets/dist/
+.DS_Store

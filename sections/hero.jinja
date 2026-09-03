@@ -1,0 +1,10 @@
+<section class="hero-section">
+  <div class="container hero-content">
+    <div>
+      <p class="eyebrow">{{ section.settings.eyebrow | default(_('Automotive parts')) }}</p>
+      <h1>{{ section.settings.title | default(_('Parts that keep you moving')) }}</h1>
+      <p>{{ section.settings.subtitle | default(_('Shop quality auto parts for your vehicle.')) }}</p>
+      {% if section.settings.button_url %}<a class="btn btn-primary" href="{{ section.settings.button_url }}">{{ section.settings.button_text | default(_('Shop now')) }}</a>{% endif %}
+    </div>
+  </div>
+</section>

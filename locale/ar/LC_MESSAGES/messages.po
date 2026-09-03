@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "Products"
+msgstr "المنتجات"
+
+msgid "Categories"
+msgstr "التصنيفات"
+
+msgid "Cart"
+msgstr "السلة"
+
+msgid "Main navigation"
+msgstr "التنقل الرئيسي"
+
+msgid "Automotive parts"
+msgstr "قطع غيار سيارات"
+
+msgid "Parts that keep you moving"
+msgstr "قطع تحافظ على استمرار رحلتك"
+
+msgid "Shop now"
+msgstr "تسوق الآن"

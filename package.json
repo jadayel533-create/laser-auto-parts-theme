@@ -1,0 +1,11 @@
+{
+  "name": "laser-auto-parts-theme",
+  "version": "0.1.0",
+  "description": "Custom Vitrin theme for Laser Auto Parts",
+  "type": "module",
+  "scripts": {
+    "build": "vitrin build",
+    "preview": "vitrin preview",
+    "format": "prettier --write \"**/*.{css,js,json,jinja,html}\""
+  }
+}
