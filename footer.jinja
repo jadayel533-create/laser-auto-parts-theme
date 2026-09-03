@@ -1,5 +1,14 @@
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© {{ store.name }} {{ now().year if now is defined else '' }}</p>
+    <div>
+      <strong>{{ store.name }}</strong>
+      {% if store.settings.branding.description %}
+        <p>{{ store.settings.branding.description }}</p>
+      {% endif %}
+    </div>
+    <div class="footer-contact">
+      {% if store.settings.contact.phone %}<a href="tel:{{ store.settings.contact.phone }}">{{ store.settings.contact.phone }}</a>{% endif %}
+      {% if store.settings.contact.email %}<a href="mailto:{{ store.settings.contact.email }}">{{ store.settings.contact.email }}</a>{% endif %}
+    </div>
   </div>
 </footer>
