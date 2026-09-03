@@ -1,14 +1,13 @@
 {% set font_family = settings.font_family | default('IBM+Plex+Sans+Arabic') %}
+{% set branding = store.settings.branding if store.settings is defined and store.settings.branding is defined else {} %}
 <!doctype html>
-<html lang="{{ session.lang }}" dir="{{ session.locale.language.direction }}">
+<html lang="{{ session.lang | default('ar') }}" dir="{{ session.locale.language.direction | default('rtl') }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ settings.primary | default('#111827') }}">
     <title>{% block title %}{{ store.name }}{% endblock %}</title>
     {% vitrin_head %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{ font_family }}:wght@400;500;600;700&display=swap">
     <style>
       :root {
         --font-family: '{{ font_family | replace('+', ' ') }}', sans-serif;
