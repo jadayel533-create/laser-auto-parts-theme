@@ -113,3 +113,51 @@ msgstr "أضف منتجات إلى سلتك للمتابعة."
 
 msgid "Continue shopping"
 msgstr "متابعة التسوق"
+
+msgid "products available"
+msgstr "منتجات متاحة"
+
+msgid "No products found"
+msgstr "لم يتم العثور على منتجات"
+
+msgid "Try another filter or browse our categories."
+msgstr "جرّب فلترًا آخر أو تصفح التصنيفات."
+
+msgid "Browse categories"
+msgstr "تصفح التصنيفات"
+
+msgid "Pagination"
+msgstr "التنقل بين الصفحات"
+
+msgid "Previous"
+msgstr "السابق"
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "All products"
+msgstr "جميع المنتجات"
+
+msgid "There are no products in this category yet."
+msgstr "لا توجد منتجات في هذا التصنيف حتى الآن."
+
+msgid "Browse parts by category to find what you need faster."
+msgstr "تصفح قطع الغيار حسب التصنيف للعثور على ما تحتاجه بشكل أسرع."
+
+msgid "No categories found"
+msgstr "لم يتم العثور على تصنيفات"
+
+msgid "Products are available in the catalog."
+msgstr "المنتجات متاحة في الكتالوج."
+
+msgid "View products"
+msgstr "عرض المنتجات"
+
+msgid "Shop by category"
+msgstr "تسوق حسب التصنيف"
+
+msgid "View all categories"
+msgstr "عرض جميع التصنيفات"
+
+msgid "Find the right parts faster."
+msgstr "اعثر على القطع المناسبة بشكل أسرع."
