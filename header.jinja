@@ -2,7 +2,7 @@
   <div class="container header-inner">
     <a class="brand" href="{{ url_for('home') }}" aria-label="{{ store.name }}">
       {% if store.settings.branding.logo %}
-        <img src="{{ store.settings.branding.logo }}" alt="{{ store.name }}">
+        <img src="{{ image_url(store.settings.branding.logo, h=96, q=90, f='auto') }}" alt="{{ store.name }}" decoding="async">
       {% else %}
         <span>{{ store.name }}</span>
       {% endif %}
