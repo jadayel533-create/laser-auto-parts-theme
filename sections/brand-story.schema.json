@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "brand-story",
+  "title": "Brand story",
+  "settings": [
+    {"id":"title","type":"text","label":"Title","default":"Parts you can trust. Service that keeps you moving."},
+    {"id":"subtitle","type":"text","label":"Subtitle","default":"A focused automotive parts experience built around quality, clear information and a smooth shopping journey."},
+    {"id":"button_text","type":"text","label":"Button text","default":"Explore products"},
+    {"id":"button_url","type":"url","label":"Button URL","default":"/products"}
+  ],
+  "blocks": []
+}
