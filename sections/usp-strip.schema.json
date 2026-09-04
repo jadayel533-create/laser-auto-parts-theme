@@ -1,7 +1,6 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "name": "usp-strip",
-  "title": "Store benefits",
-  "settings": [],
-  "blocks": []
+  "name": {"ar": "مزايا المتجر", "en": "Store benefits"},
+  "icon": "shield-check-line",
+  "template": "sections/usp-strip.jinja",
+  "settings": []
 }
