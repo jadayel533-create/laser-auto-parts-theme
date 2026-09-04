@@ -6,9 +6,12 @@
         <p>{{ store.settings.branding.description }}</p>
       {% endif %}
     </div>
-    <div class="footer-contact">
-      {% if store.settings.contact.phone %}<a href="tel:{{ store.settings.contact.phone }}">{{ store.settings.contact.phone }}</a>{% endif %}
-      {% if store.settings.contact.email %}<a href="mailto:{{ store.settings.contact.email }}">{{ store.settings.contact.email }}</a>{% endif %}
-    </div>
+    {% set contact = store.settings.contact if store.settings is defined and store.settings.contact is defined else {} %}
+    {% if contact.phone or contact.email %}
+      <div class="footer-contact" aria-label="{{ _('Contact') }}">
+        {% if contact.phone %}<a href="tel:{{ contact.phone }}">{{ contact.phone }}</a>{% endif %}
+        {% if contact.email %}<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>{% endif %}
+      </div>
+    {% endif %}
   </div>
 </footer>
