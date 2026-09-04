@@ -1,10 +1,9 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "name": "featured-products",
-  "title": "Featured products",
+  "name": {"ar": "منتجات مميزة", "en": "Featured products"},
+  "icon": "layout-grid-line",
+  "template": "sections/featured-products.jinja",
   "settings": [
-    {"id":"title","type":"text","label":"Title","default":"Featured products"},
-    {"id":"subtitle","type":"text","label":"Subtitle","default":"Quality parts selected for your vehicle."}
-  ],
-  "blocks": []
+    {"id":"title","type":"text","label":{"ar":"العنوان","en":"Title"},"default":"منتجات مميزة"},
+    {"id":"subtitle","type":"textarea","label":{"ar":"الوصف","en":"Subtitle"},"default":"قطع عالية الجودة مختارة لسيارتك."}
+  ]
 }
