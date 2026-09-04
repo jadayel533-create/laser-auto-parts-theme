@@ -29,6 +29,9 @@
       <form id="product-form" class="product-form">
         {% include 'vitrin:products/variants_list.jinja' %}
         {% include 'vitrin:products/custom_input_fields.jinja' %}
+        {% if product.product_class == 'grouped_product' %}
+          {% include 'vitrin:products/grouped-product.jinja' %}
+        {% endif %}
         <div class="quantity-row">
           <label for="product-quantity">{{ _('Quantity') }}</label>
           <input id="product-quantity" name="quantity" type="number" min="1" value="1" inputmode="numeric">
