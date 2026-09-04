@@ -1,0 +1,34 @@
+{% extends "layout.jinja" %}
+{% block title %}{{ _('Categories') }} – {{ store.name }}{% endblock %}
+{% block content %}
+<section class="section categories-page" aria-labelledby="categories-title">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{{ store.name }}</p>
+        <h1 id="categories-title">{{ _('Categories') }}</h1>
+        <p>{{ _('Browse parts by category to find what you need faster.') }}</p>
+      </div>
+    </div>
+
+    {% if categories %}
+      <div class="category-grid categories-grid">
+        {% for category in categories %}
+          <a class="category-card category-card-rich" href="{{ url_for('category_details', category_id=category.id, slug=category.slug) }}">
+            {% if category.cover_image or category.image %}
+              <img src="{{ image_url(category.cover_image or category.image, w=720, q=82, f='auto') }}" alt="{{ category.name }}" loading="lazy" decoding="async">
+            {% endif %}
+            <span>{{ category.name }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <h2>{{ _('No categories found') }}</h2>
+        <p>{{ _('Products are available in the catalog.') }}</p>
+        <a class="btn btn-primary" href="{{ url_for('list_products') }}">{{ _('View products') }}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
