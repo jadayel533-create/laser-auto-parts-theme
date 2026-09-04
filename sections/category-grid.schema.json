@@ -1,8 +1,9 @@
 {
   "name": {"ar": "تصنيفات المنتجات", "en": "Category Grid"},
-  "icon": "fa fa-th-large",
+  "icon": "grid-line",
+  "template": "sections/category-grid.jinja",
   "settings": [
-    {"id": "title", "type": "text", "label": {"ar": "العنوان", "en": "Title"}, "default": "تسوق حسب التصنيف"},
-    {"id": "subtitle", "type": "textarea", "label": {"ar": "الوصف", "en": "Subtitle"}, "default": "اعثر على القطع المناسبة بشكل أسرع."}
+    {"id":"title","type":"text","label":{"ar":"العنوان","en":"Title"},"default":"تسوق حسب التصنيف"},
+    {"id":"subtitle","type":"textarea","label":{"ar":"الوصف","en":"Subtitle"},"default":"اعثر على القطع المناسبة بشكل أسرع."}
   ]
 }
