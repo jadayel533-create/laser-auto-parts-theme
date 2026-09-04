@@ -1,15 +1,9 @@
+{% from 'components/section-heading.jinja' import render as section_heading %}
 {% set product_list = products.results if products is defined and products.results else [] %}
 {% if product_list %}
 <section class="section featured-products" aria-labelledby="featured-products-title">
   <div class="container">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">{{ _('Recommended') }}</p>
-        <h2 id="featured-products-title">{{ section.settings.title | default(_('Featured products')) }}</h2>
-        <p>{{ section.settings.subtitle | default(_('Quality parts selected for your vehicle.')) }}</p>
-      </div>
-      <a class="btn" href="{{ url_for('list_products') }}">{{ _('View all products') }}</a>
-    </div>
+    {{ section_heading(_('Recommended'), section.settings.title | default(_('Featured products')), section.settings.subtitle | default(_('Quality parts selected for your vehicle.')), url_for('list_products'), _('View all products')) }}
     <div class="product-grid">
       {% for product in product_list[:8] %}
         {% include 'components/product-card.jinja' %}
