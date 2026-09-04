@@ -1,0 +1,11 @@
+<section class="section brand-story">
+  <div class="container brand-story-inner">
+    <div>
+      <p class="eyebrow">{{ _('Laser Auto Parts') }}</p>
+      <h2>{{ section.settings.title | default(_('Parts you can trust. Service that keeps you moving.')) }}</h2>
+      <p>{{ section.settings.subtitle | default(_('A focused automotive parts experience built around quality, clear information and a smooth shopping journey.')) }}</p>
+      <a class="btn btn-primary" href="{{ section.settings.button_url | default(url_for('list_products')) }}">{{ section.settings.button_text | default(_('Explore products')) }}</a>
+    </div>
+    <div class="brand-story-mark" aria-hidden="true"><span>LASER</span><small>AUTO PARTS</small></div>
+  </div>
+</section>

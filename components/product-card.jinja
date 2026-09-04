@@ -1,0 +1,15 @@
+<article class="product-card">
+  <a class="product-image" href="{{ url_for('product_details', product_id=product.id, slug=product.slug) }}" aria-label="{{ product.name }}">
+    {% if product.thumbnail %}
+      <img src="{{ product.thumbnail }}" alt="{{ product.name }}" loading="lazy">
+    {% else %}
+      <span class="product-image-placeholder" aria-hidden="true">{{ _('Auto part') }}</span>
+    {% endif %}
+  </a>
+  <div class="product-body">
+    {% if product.brand %}<span class="product-brand">{{ product.brand.name }}</span>{% endif %}
+    <h3><a href="{{ url_for('product_details', product_id=product.id, slug=product.slug) }}">{{ product.name }}</a></h3>
+    {% if product.price %}<strong class="product-price">{{ product.price }} {{ _('SAR') }}</strong>{% endif %}
+    <a class="btn btn-primary btn-full" href="{{ url_for('product_details', product_id=product.id, slug=product.slug) }}">{{ _('View product') }}</a>
+  </div>
+</article>
