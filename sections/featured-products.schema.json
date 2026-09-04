@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "featured-products",
+  "title": "Featured products",
+  "settings": [
+    {"id":"title","type":"text","label":"Title","default":"Featured products"},
+    {"id":"subtitle","type":"text","label":"Subtitle","default":"Quality parts selected for your vehicle."}
+  ],
+  "blocks": []
+}
