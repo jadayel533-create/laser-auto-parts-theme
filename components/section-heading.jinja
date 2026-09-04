@@ -1,0 +1,10 @@
+{% macro render(eyebrow, title, subtitle='', link_url='', link_text='') %}
+  <div class="section-heading">
+    <div>
+      {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+      {% if title %}<h2>{{ title }}</h2>{% endif %}
+      {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+    </div>
+    {% if link_url and link_text %}<a class="btn" href="{{ link_url }}">{{ link_text }}</a>{% endif %}
+  </div>
+{% endmacro %}
