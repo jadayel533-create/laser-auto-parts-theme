@@ -13,5 +13,6 @@
       <a href="{{ url_for('list_categories') }}">{{ _('Categories') }}</a>
       <a href="{{ url_for('cart_page') }}">{{ _('Cart') }}</a>
     </nav>
+    {% include 'vitrin:shared/store_messages.jinja' %}
   </div>
 </header>
