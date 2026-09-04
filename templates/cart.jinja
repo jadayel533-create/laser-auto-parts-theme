@@ -1,0 +1,41 @@
+{% extends "layout.jinja" %}
+{% block title %}{{ _('Cart') }} – {{ store.name }}{% endblock %}
+{% block content %}
+<section class="section cart-page" aria-labelledby="cart-title">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{{ store.name }}</p>
+        <h1 id="cart-title">{{ _('Cart') }}</h1>
+      </div>
+    </div>
+
+    {% if cart and cart.products_count %}
+      <div class="cart-grid">
+        <div class="cart-products">
+          {% include 'vitrin:cart/products_list.jinja' %}
+        </div>
+        <aside class="cart-summary">
+          {% include 'vitrin:shared/bank_discounts.jinja' %}
+          {% include 'vitrin:cart/progressive_discount.jinja' %}
+          {% include 'vitrin:cart/customer_wallet_progress.jinja' %}
+          {% include 'vitrin:cart/gift-card.jinja' %}
+          {% include 'vitrin:cart/payment_widgets.jinja' %}
+          <div class="cart-total-row">
+            <span>{{ _('Total') }}</span>
+            <strong>{{ cart.total.formatted if cart.total and cart.total.formatted else cart.total }}</strong>
+          </div>
+          {% include 'vitrin:checkout/apple-pay-quick-checkout.jinja' %}
+          <a class="btn btn-primary btn-full" href="{{ url_for('checkout') }}">{{ _('Complete Order') }}</a>
+        </aside>
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <h2>{{ _('Cart is empty') }}</h2>
+        <p>{{ _('Add products to your cart to continue.') }}</p>
+        <a class="btn btn-primary" href="{{ url_for('list_products') }}">{{ _('Continue shopping') }}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
