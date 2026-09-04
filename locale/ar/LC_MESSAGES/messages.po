@@ -26,3 +26,63 @@ msgstr "قطع تحافظ على استمرار رحلتك"
 
 msgid "Shop now"
 msgstr "تسوق الآن"
+
+msgid "Store benefits"
+msgstr "مزايا المتجر"
+
+msgid "Quality parts"
+msgstr "قطع عالية الجودة"
+
+msgid "Selected for reliability"
+msgstr "مختارة بعناية للموثوقية"
+
+msgid "Fast delivery"
+msgstr "توصيل سريع"
+
+msgid "Delivery across Saudi Arabia"
+msgstr "توصيل إلى جميع مناطق السعودية"
+
+msgid "Secure payment"
+msgstr "دفع آمن"
+
+msgid "Trusted checkout experience"
+msgstr "تجربة دفع موثوقة"
+
+msgid "Expert support"
+msgstr "دعم متخصص"
+
+msgid "Help finding the right part"
+msgstr "نساعدك في العثور على القطعة المناسبة"
+
+msgid "Recommended"
+msgstr "موصى به"
+
+msgid "Featured products"
+msgstr "منتجات مميزة"
+
+msgid "Quality parts selected for your vehicle."
+msgstr "قطع عالية الجودة مختارة لسيارتك."
+
+msgid "View all products"
+msgstr "عرض جميع المنتجات"
+
+msgid "View product"
+msgstr "عرض المنتج"
+
+msgid "Auto part"
+msgstr "قطعة سيارات"
+
+msgid "SAR"
+msgstr "ريال"
+
+msgid "Laser Auto Parts"
+msgstr "ليزر لقطع غيار السيارات"
+
+msgid "Parts you can trust. Service that keeps you moving."
+msgstr "قطع يمكنك الوثوق بها. وخدمة تبقيك على الطريق."
+
+msgid "A focused automotive parts experience built around quality, clear information and a smooth shopping journey."
+msgstr "تجربة متخصصة لقطع غيار السيارات، تجمع بين الجودة والمعلومات الواضحة وسهولة التسوق."
+
+msgid "Explore products"
+msgstr "استكشف المنتجات"
