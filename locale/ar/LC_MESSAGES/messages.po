@@ -86,3 +86,6 @@ msgstr "تجربة متخصصة لقطع غيار السيارات، تجمع ب
 
 msgid "Explore products"
 msgstr "استكشف المنتجات"
+
+msgid "Contact"
+msgstr "تواصل معنا"
