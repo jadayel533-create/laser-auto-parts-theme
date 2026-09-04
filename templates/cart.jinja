@@ -26,7 +26,7 @@
             <strong>{{ cart.total.formatted if cart.total and cart.total.formatted else cart.total }}</strong>
           </div>
           {% include 'vitrin:checkout/apple-pay-quick-checkout.jinja' %}
-          <a class="btn btn-primary btn-full" href="{{ url_for('checkout') }}">{{ _('Complete Order') }}</a>
+          <a class="btn btn-primary btn-full" href="{{ url_for('single_page_checkout') }}">{{ _('Complete Order') }}</a>
         </aside>
       </div>
     {% else %}
