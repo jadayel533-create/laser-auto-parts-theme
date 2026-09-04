@@ -28,6 +28,7 @@
       {% block content %}{% endblock %}
     </main>
     {% include 'footer.jinja' %}
+    {% include 'vitrin:shared/region_settings_dialog.jinja' %}
     {% vitrin_body %}
     <script src="{{ 'assets/theme.js' | asset_url }}"></script>
   </body>
