@@ -89,3 +89,27 @@ msgstr "استكشف المنتجات"
 
 msgid "Contact"
 msgstr "تواصل معنا"
+
+msgid "SKU"
+msgstr "رمز المنتج"
+
+msgid "Quantity"
+msgstr "الكمية"
+
+msgid "Add to Cart"
+msgstr "أضف إلى السلة"
+
+msgid "Total"
+msgstr "الإجمالي"
+
+msgid "Complete Order"
+msgstr "إتمام الطلب"
+
+msgid "Cart is empty"
+msgstr "السلة فارغة"
+
+msgid "Add products to your cart to continue."
+msgstr "أضف منتجات إلى سلتك للمتابعة."
+
+msgid "Continue shopping"
+msgstr "متابعة التسوق"
