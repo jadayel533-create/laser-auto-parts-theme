@@ -1,4 +1,4 @@
-{% set category_list = categories.results if categories is defined and categories.results else [] %}
+{% set category_list = categories if categories is defined and categories else [] %}
 {% if category_list %}
 <section class="section" aria-labelledby="category-grid-title">
   <div class="container">
@@ -12,6 +12,9 @@
     <div class="category-grid">
       {% for category in category_list[:8] %}
         <a class="category-card" href="{{ url_for('category_details', category_id=category.id, slug=category.slug) }}">
+          {% if category.cover_image or category.image %}
+            <img src="{{ image_url(category.cover_image or category.image, w=720, q=82, f='auto') }}" alt="{{ category.name }}" loading="lazy" decoding="async">
+          {% endif %}
           <span>{{ category.name }}</span>
         </a>
       {% endfor %}
