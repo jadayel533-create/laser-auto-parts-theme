@@ -1,0 +1,47 @@
+{% extends "layout.jinja" %}
+{% block title %}{{ product.name }} – {{ store.name }}{% endblock %}
+{% block content %}
+<section class="section product-details" aria-labelledby="product-title">
+  <div class="container product-details-grid">
+    <div class="product-gallery">
+      {% if product.main_image and product.main_image.image and product.main_image.image.large %}
+        <img class="product-main-image" src="{{ image_url(product.main_image.image.large, w=1000, q=88, f='auto') }}" alt="{{ product.name }}" decoding="async">
+      {% elif product.images and product.images[0] and product.images[0].image and product.images[0].image.full_size %}
+        <img class="product-main-image" src="{{ image_url(product.images[0].image.full_size, w=1000, q=88, f='auto') }}" alt="{{ product.name }}" decoding="async">
+      {% elif product.thumbnail %}
+        <img class="product-main-image" src="{{ image_url(product.thumbnail, w=1000, q=88, f='auto') }}" alt="{{ product.name }}" decoding="async">
+      {% else %}
+        <div class="product-main-image product-image-placeholder" aria-hidden="true">{{ _('Auto part') }}</div>
+      {% endif %}
+    </div>
+    <div class="product-info">
+      {% include 'vitrin:products/badge.jinja' %}
+      {% if product.brand %}<p class="eyebrow">{{ product.brand.name }}</p>{% endif %}
+      <h1 id="product-title">{{ product.name }}</h1>
+      {% if product.sku %}<p class="product-sku">{{ _('SKU') }}: {{ product.sku }}</p>{% endif %}
+      {% if product.formatted_sale_price %}
+        <div class="product-price product-price-large"><strong>{{ product.formatted_sale_price }}</strong> <del>{{ product.formatted_price }}</del></div>
+      {% elif product.formatted_price %}
+        <strong class="product-price product-price-large">{{ product.formatted_price }}</strong>
+      {% endif %}
+      {% if product.description %}<div class="product-description">{{ product.description }}</div>{% endif %}
+
+      <form id="product-form" class="product-form">
+        {% include 'vitrin:products/variants_list.jinja' %}
+        {% include 'vitrin:products/custom_input_fields.jinja' %}
+        <div class="quantity-row">
+          <label for="product-quantity">{{ _('Quantity') }}</label>
+          <input id="product-quantity" name="quantity" type="number" min="1" value="1" inputmode="numeric">
+        </div>
+        <button type="button" class="btn btn-primary btn-full" onclick="window.zid?.cart?.addProduct?.({form_id:'product-form'})">{{ _('Add to Cart') }}</button>
+      </form>
+
+      {% include 'vitrin:shared/bank_discounts.jinja' %}
+      {% include 'vitrin:products/payment_widgets.jinja' %}
+      {% include 'vitrin:products/loyalty_points_widget.jinja' %}
+      {% include 'vitrin:checkout/apple-pay-quick-checkout.jinja' %}
+      {% include 'vitrin:shared/metafields.jinja' %}
+    </div>
+  </div>
+</section>
+{% endblock %}
