@@ -1,12 +1,11 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "name": "brand-story",
-  "title": "Brand story",
+  "name": {"ar": "قصتنا", "en": "Brand story"},
+  "icon": "building-line",
+  "template": "sections/brand-story.jinja",
   "settings": [
-    {"id":"title","type":"text","label":"Title","default":"Parts you can trust. Service that keeps you moving."},
-    {"id":"subtitle","type":"text","label":"Subtitle","default":"A focused automotive parts experience built around quality, clear information and a smooth shopping journey."},
-    {"id":"button_text","type":"text","label":"Button text","default":"Explore products"},
-    {"id":"button_url","type":"url","label":"Button URL","default":"/products"}
-  ],
-  "blocks": []
+    {"id":"title","type":"text","label":{"ar":"العنوان","en":"Title"},"default":"قطع يمكنك الوثوق بها. وخدمة تبقيك على الطريق."},
+    {"id":"subtitle","type":"textarea","label":{"ar":"الوصف","en":"Subtitle"},"default":"تجربة متخصصة لقطع غيار السيارات، مبنية على الجودة ووضوح المعلومات وسهولة التسوق."},
+    {"id":"button_text","type":"text","label":{"ar":"نص الزر","en":"Button text"},"default":"استكشف المنتجات"},
+    {"id":"button_url","type":"url","label":{"ar":"رابط الزر","en":"Button URL"},"default":"/products"}
+  ]
 }
