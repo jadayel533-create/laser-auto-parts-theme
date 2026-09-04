@@ -1,0 +1,48 @@
+{% extends "layout.jinja" %}
+{% block title %}{{ _('Products') }} – {{ store.name }}{% endblock %}
+{% block content %}
+<section class="section products-page" aria-labelledby="products-title">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{{ store.name }}</p>
+        <h1 id="products-title">{{ _('Products') }}</h1>
+        {% if products.count is defined %}<p>{{ products.count }} {{ _('products available') }}</p>{% endif %}
+      </div>
+    </div>
+
+    {% if products.filters and products.filters | length > 0 %}
+      <div class="catalog-filters">
+        {% include 'vitrin:products/filters.jinja' %}
+      </div>
+    {% endif %}
+
+    {% set product_list = products.results if products is defined and products.results else [] %}
+    {% if product_list %}
+      <div class="product-grid">
+        {% for product in product_list %}
+          {% include 'components/product-card.jinja' %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <h2>{{ _('No products found') }}</h2>
+        <p>{{ _('Try another filter or browse our categories.') }}</p>
+        <a class="btn btn-primary" href="{{ url_for('list_categories') }}">{{ _('Browse categories') }}</a>
+      </div>
+    {% endif %}
+
+    {% if products.pages_count and products.pages_count > 1 %}
+      <nav class="pagination" aria-label="{{ _('Pagination') }}">
+        {% if products.page > 1 %}
+          <a class="btn" href="{{ session.url.include_query_params(page=products.page - 1) }}">{{ _('Previous') }}</a>
+        {% endif %}
+        <span>{{ products.page }} / {{ products.pages_count }}</span>
+        {% if products.page < products.pages_count %}
+          <a class="btn" href="{{ session.url.include_query_params(page=products.page + 1) }}">{{ _('Next') }}</a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
